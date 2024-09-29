@@ -18,7 +18,10 @@ public class QueueStackTester {
           //      oq.enqueue(temp);
           //  q.enqueue(temp);
       //  }
-        public <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
+
+        spliting(q,oq,eq,q.length());
+    }
+         public <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
         if (i == 0)
             break;
         T temp = q.serve();
@@ -29,8 +32,6 @@ public class QueueStackTester {
         q.enqueue(temp);
         spliting(q,oq,eq,i--);
         }
-        spliting(q,oq,eq,q.length());
-    }
     public static <T> void remove(LinkedPQ<T> pq, int p)
     {
         throw new UnsupportedOperationException("Not supported yet.");
