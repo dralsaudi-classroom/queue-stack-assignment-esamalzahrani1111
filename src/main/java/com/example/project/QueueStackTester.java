@@ -30,7 +30,8 @@ public class QueueStackTester {
         else
             oq.enqueue(temp);
         q.enqueue(temp);
-        spliting(q,oq,eq,i--);
+             i--;
+        spliting(q,oq,eq,i);
         }
     public static <T> void remove(LinkedPQ<T> pq, int p)
     {
