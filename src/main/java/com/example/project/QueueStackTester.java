@@ -23,7 +23,7 @@ public class QueueStackTester {
     }
          public static <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
         if (i == 0)
-            break;
+            return;
         T temp = q.serve();
         if (i % 2 ==0)
             eq.enqueue(temp);
