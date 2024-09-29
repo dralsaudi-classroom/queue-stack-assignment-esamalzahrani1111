@@ -18,11 +18,11 @@ public class QueueStackTester {
           //      oq.enqueue(temp);
           //  q.enqueue(temp);
       //  }
-        int i = q.length()+1;
-        spliting(q,oq,eq,i);
+        int j = q.length();
+        spliting(q,oq,eq,1);
     }
          public static <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
-        if (i == 1)
+        if (i == j+1)
             return;
         T temp = q.serve();
         if (i % 2 ==0)
@@ -30,7 +30,7 @@ public class QueueStackTester {
         else
             oq.enqueue(temp);
         q.enqueue(temp);
-             i--;
+             i++;
         spliting(q,oq,eq,i);
         }
     public static <T> void remove(LinkedPQ<T> pq, int p)
