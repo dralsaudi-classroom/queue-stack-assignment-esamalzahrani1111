@@ -12,21 +12,24 @@ public class QueueStackTester {
         // Example. Given the queue (A, B, C, D, E), split results in oq (A, C, E), and eq(B, D).
        // for (int i =1; i<=q.length();i++){
           //  T temp = q.serve();
-         //   if (i % 2 == 0)
+          //   if (i % 2 == 0)
             //    eq.enqueue(temp);
           //  else
           //      oq.enqueue(temp);
           //  q.enqueue(temp);
       //  }
-        DLL<T> temp = new DLL();
-        
+        private <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
+        if (i == 0)
+            break;
         T temp = q.serve();
-        if (q.length(); % 2 == 0)
+        if (i % 2 ==0)
             eq.enqueue(temp);
-        else 
+        else
             oq.enqueue(temp);
-        temp.enqueue(temp);
-        
+        q.enqueue(temp);
+        spliting(q,oq,eq,i--);
+        }
+        spliting(q,oq,eq,q.length());
     }
     public static <T> void remove(LinkedPQ<T> pq, int p)
     {
