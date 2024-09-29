@@ -10,14 +10,23 @@ public class QueueStackTester {
         // the second queue. The original queue should remain unchanged at the end of the
         // method.
         // Example. Given the queue (A, B, C, D, E), split results in oq (A, C, E), and eq(B, D).
-        for (int i =1; i<=q.length();i++){
-            T temp = q.serve();
-            if (i % 2 == 0)
-                eq.enqueue(temp);
-            else
-                oq.enqueue(temp);
-            q.enqueue(temp);
-        }
+       // for (int i =1; i<=q.length();i++){
+          //  T temp = q.serve();
+         //   if (i % 2 == 0)
+            //    eq.enqueue(temp);
+          //  else
+          //      oq.enqueue(temp);
+          //  q.enqueue(temp);
+      //  }
+        DLL<T> temp = new DLL();
+        
+        T temp = q.serve();
+        if (q.length(); % 2 == 0)
+            eq.enqueue(temp);
+        else 
+            oq.enqueue(temp);
+        temp.enqueue(temp);
+        
     }
     public static <T> void remove(LinkedPQ<T> pq, int p)
     {
