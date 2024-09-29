@@ -18,7 +18,7 @@ public class QueueStackTester {
           //      oq.enqueue(temp);
           //  q.enqueue(temp);
       //  }
-        private <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
+        public <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
         if (i == 0)
             break;
         T temp = q.serve();
