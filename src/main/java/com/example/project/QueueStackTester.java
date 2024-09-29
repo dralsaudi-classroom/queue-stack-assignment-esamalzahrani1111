@@ -18,8 +18,8 @@ public class QueueStackTester {
           //      oq.enqueue(temp);
           //  q.enqueue(temp);
       //  }
-
-        spliting(q,oq,eq,q.length());
+        int i = q.length();
+        spliting(q,oq,eq,i);
     }
          public static <T> void spliting(Queue<T> q, Queue<T> oq, Queue<T> eq,int i){
         if (i == 0)
