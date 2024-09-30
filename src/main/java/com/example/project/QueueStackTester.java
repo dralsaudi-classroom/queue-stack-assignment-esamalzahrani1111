@@ -43,12 +43,7 @@ public class QueueStackTester {
     }
     public static <T> boolean search(Stack<T> st, T e)
     {
-       // throw new UnsupportedOperationException("Not supported yet.");
-        // Write the recursive static method search that searches for an element e in a stack st
-        // and returns true if it’s found or false otherwise. st should not change at the end of
-        // the method. You are not allowed to use any auxiliary data structures.
-        // Example. Given the stack st (top-to-bottom): 5, 7, 5, 3, 2. search(st, 3) returns
-        // true while search(st, 1) returns false.
+       
          return sea(st,e);
     }
 
