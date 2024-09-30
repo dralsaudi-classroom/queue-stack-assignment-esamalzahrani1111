@@ -50,17 +50,27 @@ public class QueueStackTester {
 
     public static <T> boolean sea(Stack<T> st,T e){
         T temp = null;
-        if(!(st.empty()))
-        {
-       temp = st.pop();
-        }
-        else {
+        boolean found = false;
+      //  if(!(st.empty()))
+      //  {
+      // temp = st.pop();
+      //  }
+       // else {
+       //     return false;
+      //  }
+       //     if (temp == e){
+       //         st.push(temp);
+       //         return true;
+     //               }
+    //    else return sea(st,e);
+   // }
+        if (st.empty())
             return false;
-        }
-            if (temp == e){
-                st.push(temp);
-                return true;
-                    }
-        else return sea(st,e);
-    }
+        temp = st.pop();
+        if (temp == e)
+            found = true;
+        if (found == false)
+        found = sea(st,e);
+        st.push(temp);
+        return found
 }
