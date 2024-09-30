@@ -49,7 +49,7 @@ public class QueueStackTester {
         // the method. You are not allowed to use any auxiliary data structures.
         // Example. Given the stack st (top-to-bottom): 5, 7, 5, 3, 2. search(st, 3) returns
         // true while search(st, 1) returns false.
-        sea(st,e)
+        sea(st,e);
     }
 
 
