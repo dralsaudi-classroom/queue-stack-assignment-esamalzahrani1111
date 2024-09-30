@@ -65,6 +65,6 @@ public class QueueStackTester {
                 st.push(temp);
                 return true;
                     }
-        else return sea(st,t);
+        else return sea(st,e);
     }
 }
