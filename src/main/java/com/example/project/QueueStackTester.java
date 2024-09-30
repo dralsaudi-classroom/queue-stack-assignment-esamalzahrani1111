@@ -44,7 +44,7 @@ public class QueueStackTester {
         // pq: [A, 10], [D, 8], [B, 5].
         for (int i =0; i<pq.size;i++){
             temp = pq.serve();
-            if (temp.int >= p)
+            if (temp.p >= p)
                 pq.enqueue(temp.data,temp.p);
             
         }
