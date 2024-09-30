@@ -64,13 +64,15 @@ public class QueueStackTester {
      //               }
     //    else return sea(st,e);
    // }
-        if (st.empty())
-            return false;
+        if ( !(st.empty()) ){
         temp = st.pop();
         if (temp == e)
             found = true;
         if (found == false)
         found = sea(st,e);
         st.push(temp);
-        return found
+        return found;
+            }
+        else 
+            return false;
 }
