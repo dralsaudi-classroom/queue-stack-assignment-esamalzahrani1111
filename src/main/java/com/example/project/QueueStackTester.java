@@ -35,20 +35,23 @@ public class QueueStackTester {
         }
     public static <T> void remove(LinkedPQ<T> pq, int p)
     {
-        if (pq.length() > 0){
-        PQElement<T> temp = null;
+
        // throw new UnsupportedOperationException("Not supported yet.");
         // Write a static method remove that removes every element in the priority queue
         // having priority less than p.
         // Example. Given pq: [A, 10], [D, 8], [B, 5], [E, 3], [C, 2] remove(pq, 5) results in
         // pq: [A, 10], [D, 8], [B, 5].
-        for (int i =0; i<pq.length();i++){
+            PQElement<T> temp = null;
+        int count = pq.length()
+            if (pq.length() > 0){
+        for (int i =0; i<count;i++){
             temp = pq.serve();
             if (temp.p >= p)
                 pq.enqueue(temp.data,temp.p);
             
         }
-    }}
+    }
+    }
 
 
 
