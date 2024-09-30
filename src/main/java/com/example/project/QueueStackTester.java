@@ -50,4 +50,16 @@ public class QueueStackTester {
         // Example. Given the stack st (top-to-bottom): 5, 7, 5, 3, 2. search(st, 3) returns
         // true while search(st, 1) returns false.
     }
+
+
+    public static <T> boolean sea(Stack<T> st,T e){
+        if(!(st.empty()))
+        T temp = st.pop();
+        else return false;
+            if (temp == e){
+                st.push(temp)
+                return true
+                    }
+        else return sea(st,t)
+    }
 }
