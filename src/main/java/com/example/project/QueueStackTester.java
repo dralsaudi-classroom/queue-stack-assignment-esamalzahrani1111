@@ -42,7 +42,7 @@ public class QueueStackTester {
         // Example. Given pq: [A, 10], [D, 8], [B, 5], [E, 3], [C, 2] remove(pq, 5) results in
         // pq: [A, 10], [D, 8], [B, 5].
             PQElement<T> temp = null;
-        int count = pq.length()
+        int count = pq.length();
             if (pq.length() > 0){
         for (int i =0; i<count;i++){
             temp = pq.serve();
