@@ -42,7 +42,7 @@ public class QueueStackTester {
         // Example. Given pq: [A, 10], [D, 8], [B, 5], [E, 3], [C, 2] remove(pq, 5) results in
         // pq: [A, 10], [D, 8], [B, 5].
         LinkedPQ<T> temp = new LinkedPQ();
-        PQElement tempData = null;
+        PQElement<T> tempData = null;
         if (pq.length() > 0){
             while (pq.length() > 0){
                 tempData = pq.serve();
@@ -54,7 +54,7 @@ public class QueueStackTester {
         while (temp.length() > 0)
             {
                 tempData = temp.serve();
-                eq.enqueue(tempData.data,tempData.p);
+                pq.enqueue(tempData.data,tempData.p);
             }
     }
 
