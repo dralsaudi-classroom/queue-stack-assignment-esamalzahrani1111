@@ -41,18 +41,22 @@ public class QueueStackTester {
         // having priority less than p.
         // Example. Given pq: [A, 10], [D, 8], [B, 5], [E, 3], [C, 2] remove(pq, 5) results in
         // pq: [A, 10], [D, 8], [B, 5].
-            PQElement<T> temp = null;
-        int count = pq.length();
-            if (pq.length() > 0){
-        for (int i =0; i<count;i++){
-            temp = pq.serve();
-            if (temp.p >= p)
-                pq.enqueue(temp.data,temp.p);
-            
+        LinkedPQ<T> temp = new LinkedPQ();
+        PQElement tempData = null;
+        if (pq.length() > 0){
+            while (pq.length() > 0){
+                tempData = pq.serve();
+                if (tempData.p >= p){
+                    temp.enqueue(tempData.data,tempData.p);
+                }
+            }
         }
+        while (temp.length() > 0)
+            {
+                tempData = temp.serve();
+                eq.enqueue(tempData.data,tempData.p);
+            }
     }
-    }
-
 
 
 
